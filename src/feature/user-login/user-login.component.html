@@ -1,0 +1,22 @@
+
+<div class = "user-list">
+    <section class = "heading">
+<h4>User List</h4>
+</section>
+
+<table>
+  
+    <tr><th>Id</th><th>Firstname</th><th>Lastname</th><th>Phone</th><th>Email</th><th>Password</th><th>Action</th></tr>
+  
+
+
+<tr *ngFor="let user of users">
+    <td>{{user.id}}</td>
+    <td>{{user.firstname}}</td>
+    <td>{{user.lastname}}</td>
+    <td>{{user.phone}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.password}}</td>
+</tr>
+
+</table>

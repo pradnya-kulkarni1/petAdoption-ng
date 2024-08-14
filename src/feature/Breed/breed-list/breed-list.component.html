@@ -1,0 +1,21 @@
+<div class="breed-list">
+    <section class = "heading">
+       <h4>List of Breeds</h4>
+        <a routerLink = "/breed/create">Add New
+            <img width = "20" height="20" src="assets/add-icon.png" title = "Add New"/>
+        </a>
+    </section>
+
+    <table class = "table table-sm table-warning">
+        <thead>
+            <tr><th>Id</th><th>Species</th><th>Name</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+         <tr *ngFor="let breed of breeds">
+            <td>{{breed.id}}</td>
+            <td>{{breed.species.name}}</td>
+            <td>{{breed.name}}</td>
+         </tr>   
+        </tbody>
+    </table>
+</div>

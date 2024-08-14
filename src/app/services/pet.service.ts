@@ -14,4 +14,16 @@ export class PetService {
   getPets():Observable<Pet[]>{
     return this.http.get<Pet[]>(URL);
   }
+
+  postPet(pet: Pet):Observable<Pet>{
+    return this.http.post<Pet>(URL, pet);
+  }
+  
+  updatePet(Pet: Pet):Observable<Pet> {
+    return this.http.put(URL + '/'+Pet.id,Pet) as Observable<Pet>;
+  }
+  
+  deletePet(id: number): Observable<boolean>{
+    return this.http.delete(URL+"/"+id) as Observable<boolean>;
+  }
 }

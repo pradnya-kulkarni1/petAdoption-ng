@@ -1,49 +1,110 @@
-
-<nav class="navbar navbar-expand-lg"> 
+<mat-toolbar>
+  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened">
+      menu
+    </mat-icon>
+    <mat-icon *ngIf="sidenav.opened">
+      close
+    </mat-icon>
+  </button>
   <img height="50" width="50" src="assets/loveanimals.png" alt="Pet Home Logo">
   <div class="navbar-brand"> Pet Home</div>
     <a href="https://www.onehealth.org/blog/tips-for-choosing-the-right-pet-for-your-home-and-lifestyle">Tips for choosing right pet</a> 
       
-  </nav>
-<div class="row">
-  <div *ngFor="let pet of pets" class="col">
-       <div class="card">
-      <img width="150" height="100" src="{{pet.photoPath}}">
-     <div>{{pet.name}}</div>
-      <div>
-          <a>
-            <img
-              width="30"
-              height="30"
-              src="assets/details.png"
-              title="Pet Details"
-            /> More Details
-          </a>
-        </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav">
+      <h4 class="name">Pet Home</h4>
+      <p class="description">Pet Care and Adoption Center</p>
+      <mat-divider></mat-divider>
+      <button mat-button class="menu-button" routerLink="/home">
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+    </button>
+    <button  mat-button class="menu-button" routerLink="/adoption/request">
+      <mat-icon>star</mat-icon>
+      <span>Species</span>
+    </button>
+    <button  mat-button class="menu-button" routerLink="/breed/list">
+      <mat-icon>star</mat-icon>
+      <span>Breed</span>
+    </button>
+    <button  mat-button class="menu-button" routerLink="/adoption/request">
+      <mat-icon>star</mat-icon>
+      <span>Pets</span>
+    </button>
+    <button  mat-button class="menu-button" routerLink="/adoption/request">
+      <mat-icon>star</mat-icon>
+      <span>User</span>
+    </button>
+    <button  mat-button class="menu-button" routerLink="/adoption/request">
+      <mat-icon>star</mat-icon>
+      <span>Customer</span>
+    </button>
+    <button  mat-button class="menu-button" routerLink="/adoption/request">
+      <mat-icon>star</mat-icon>
+      <span>Adoption Request</span>
+    </button>
+    <button  mat-button class="menu-button" routerLink="/adoption/request">
+      <mat-icon>star</mat-icon>
+      <span>Review</span>
+    </button>
+    <button  mat-button class="menu-button" routerLink="/adoption/request">
+      <mat-icon>star</mat-icon>
+      <span>Adopt</span>
+    </button>
+    <button  mat-button class="menu-button" routerLink="/adoption/request">
+      <mat-icon>star</mat-icon>
+      <span>Adopted Pets</span>
+    </button>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="content" mat-elevation-z4>
+        <div class="row">
+          <div *ngFor="let pet of pets" class="col">
+               <div class="card">
+              <img width="250" height="200" src="{{pet.photoPath}}">
+             <div>{{pet.name}}</div>
+              <div>
+                  <a>
+                    <img
+                      width="30"
+                      height="30"
+                      src="assets/details.png"
+                      title="Pet Details"
+                    /> More Details
+                  </a>
+                </div>
+                </div>
+                
+              </div>
+        
         </div>
         
+        <footer class="footer">
+          <div class="footer-content">
+            <div class="footer-section">
+              <h4>Privacy Policy</h4>
+              <p>This is a project for learning and exploring, all the data is imaginary...</p>
+            </div>
+            <div class="footer-section">
+              <h4>Copyright</h4>
+              <p>&#169; 2024 Pet Home. All rights reserved.</p>
+            </div>
+            <div class="footer-section">
+              <h4>Contact</h4>
+              <p>Email: contact&#64;pethome.com</p>
+              <p>Phone: (123) 456-7890</p>
+            </div>
+          </div>
+          <div class="bottom-picture">
+            <img height="150" width="200" src="assets/sleeping.jpg">
+          </div>
+          
+        </footer>
+        
+        
       </div>
-
-</div>
-
-<footer class="footer">
-  <div class="footer-content">
-    <div class="footer-section">
-      <h4>Privacy Policy</h4>
-      <p>This is a project for learning and exploring, all the data is imaginary...</p>
-    </div>
-    <div class="footer-section">
-      <h4>Copyright</h4>
-      <p>&#169; 2024 Pet Home. All rights reserved.</p>
-    </div>
-    <div class="footer-section">
-      <h4>Contact</h4>
-      <p>Email: contact&#64;pethome.com</p>
-      <p>Phone: (123) 456-7890</p>
-    </div>
-  </div>
-  <div class="bottom-picture">
-    <img height="300" width="600" src="assets/sleeping.jpg">
-  </div>
-  
-</footer>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

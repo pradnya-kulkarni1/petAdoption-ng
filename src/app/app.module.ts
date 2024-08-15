@@ -17,6 +17,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import { BreedListComponent } from '../feature/Breed/breed-list/breed-list.component';
 import { PetListComponent } from '../feature/pet/pet-list/pet-list.component';
 import { PetCreateComponent } from '../feature/pet/pet-create/pet-create.component';
+import { SpeciesListComponent } from '../feature/species/species-list/species-list.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { PetCreateComponent } from '../feature/pet/pet-create/pet-create.compone
     AdoptionRequestComponent,
     BreedListComponent,
     PetListComponent,
-    PetCreateComponent
+    PetCreateComponent,
+    SpeciesListComponent,
+    
     
 
   ],

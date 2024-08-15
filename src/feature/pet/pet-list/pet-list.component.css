@@ -1,0 +1,18 @@
+.pet-list {
+    width: 30%;
+    margin: 50px auto;
+    background: rgba(215, 243, 152, 0.75); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(245, 127, 127, 0.723);
+  }
+  table, th, td {
+    border: 1px solid #eda586;
+    border-inline-end-color: brown;
+  
+  }
+  
+  mat-toolbar{
+    background:rgb(140, 246, 177);
+    color:rgb(245, 34, 133);
+  }

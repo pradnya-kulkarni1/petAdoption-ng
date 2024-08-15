@@ -45,6 +45,10 @@ navbar {
   .col {
     flex: 1 1 calc(10% - 16px); /* Adjust the card width, here 4 cards per row */
     box-sizing: border-box;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
   }
   
   
@@ -53,13 +57,17 @@ navbar {
     border: 1px solid #ccc;
     display:flex;
     width:2.5in;
-    height:2in;
+    height:2.7in;
     align-content:center;
     padding: 16px;
     align-items: center;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
     transition: box-shadow 0.3s ease;
+    justify-content:center;
+    flex-direction:column;
+    
+    margin-top:15px;
   }
   .card:hover{
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -67,6 +75,15 @@ navbar {
 
   .navbar .navbar-brand{
     margin-right:auto;
+    justify-content:flex-start;
+    display:contents;
+    
+  }
+  .center-link{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
   }
   .breed-select{
     padding:10px;
@@ -109,6 +126,9 @@ navbar {
   mat-toolbar{
     background:rgb(140, 246, 177);
     color:rgb(245, 34, 133);
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
   }
   mat-sidenav {
 
@@ -161,7 +181,6 @@ navbar {
     margin-bottom: 16px;
     background-color:lightgrey;
   }
-  mat-toolbar{
-    display:flex;
+  .center-link{
+    margin:0
   }
-  

@@ -1,28 +1,29 @@
 <mat-toolbar>
     <img height="50" width="50" src="assets/loveanimals.png" alt="Pet Home Logo">
     <div class="navbar-brand"> Pet Home</div>
-    </mat-toolbar>
-<div class="pet-list">
+</mat-toolbar>
+
+<div class="species-list">
   
     <section class = "heading">
-       <h4>List of Pets</h4>
-        <a routerLink = "/pet/create">Add New
+       <h4>List of Species</h4>
+        <a routerLink = "/species/create">Add New
             <img width = "20" height="20" src="assets/add-icon.png" title = "Add New"/>
         </a>
     </section>
 
     <table class = "table table-sm table-warning">
         <thead>
-            <tr><th>Id</th><th>Breed</th><th>Name</th><th>Available</th></tr>
+            <tr><th>Id</th><th>Name</th><th>Adoption Fee</th></tr>
         </thead>
         <tbody>
-         <tr *ngFor="let pet of pets">
-            <td>{{pet.id}}</td>
-            <td>{{pet.breed.name}}</td>
-            <td>{{pet.name}}</td>
-            <td>{{pet.available}}</td>
+         <tr *ngFor="let s of speciess">
+            <td>{{s.id}}</td>
+            <td>{{s.name}}</td>
+            <td>{{s.adoptionFee | currency}}</td>
          </tr>   
         </tbody>
     </table>
 </div>
+
 

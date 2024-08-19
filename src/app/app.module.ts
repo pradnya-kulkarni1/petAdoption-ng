@@ -18,6 +18,9 @@ import { BreedListComponent } from '../feature/Breed/breed-list/breed-list.compo
 import { PetListComponent } from '../feature/pet/pet-list/pet-list.component';
 import { PetCreateComponent } from '../feature/pet/pet-create/pet-create.component';
 import { SpeciesListComponent } from '../feature/species/species-list/species-list.component';
+import { FormsModule } from '@angular/forms';
+import { MatListModule } from '@angular/material/list';
+import { ReviewComponent } from '../feature/review/review.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { SpeciesListComponent } from '../feature/species/species-list/species-li
     PetListComponent,
     PetCreateComponent,
     SpeciesListComponent,
-    
+    ReviewComponent
+
     
 
   ],
@@ -42,7 +46,9 @@ import { SpeciesListComponent } from '../feature/species/species-list/species-li
     MatSidenavModule,
     MatButtonModule,
     MatIconModule,
-    MatDividerModule
+    MatDividerModule,
+    FormsModule,
+    MatListModule
 
   ],
   providers: [

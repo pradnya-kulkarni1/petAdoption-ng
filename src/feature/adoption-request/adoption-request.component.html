@@ -1,1 +1,39 @@
-<p>adoption-request works!</p>
+<div class = "adoption-request">
+    <h4>Request For Adoption</h4>
+
+    <main class="single">
+        <table class = "table table-sm">
+            <tr>
+                <td>Customer: </td>
+                <td>
+                    <select [(ngModel)]="adoptionRequest.customer" class = "rounded">
+                        <option *ngFor="let c of customers"[ngValue] = "c">
+                            {{c.email}}
+                        </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Reference Personal</td>
+                <td>
+                    <select [(ngModel)]="adoptionRequest.referencePersonal" class="rounded">
+                        <option *ngFor="let r of referenceP" [ngValue]="r">
+                            {{r.firstname+" "+r.lastname}}
+                        </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Reference background</td>
+                <td>
+                    <select [(ngModel)]="adoptionRequest.referenceBackground" class="rounded">
+                        <option *ngFor="let r of referenceB" [ngValue]="r">
+                            {{r.firstname+" "+r.lastname}}
+                        </option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <span><button (click)="submit()" class="btn btn-primary">Submit</button></span>
+    </main>
+</div>

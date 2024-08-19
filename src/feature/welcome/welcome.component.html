@@ -1,5 +1,5 @@
 <mat-toolbar>
-  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+  <button mat-icon-button *ngIf="sidenav.mode === 'side'" (click)="toggleSidenav()">
     <mat-icon *ngIf="!sidenav.opened">
       menu
     </mat-icon>
@@ -11,10 +11,15 @@
   <div class="navbar-brand"> Pet Home</div>
    <div class="center-link"> <a href="https://www.onehealth.org/blog/tips-for-choosing-the-right-pet-for-your-home-and-lifestyle">Tips for choosing right pet</a> 
    </div>
+   <div>{{welcomeMsg}}</div>
+   <div>
+    <button *ngIf="!isUser" routerLink="/user/login" class="btn btn-success">User Login</button>
+    <button *ngIf="isUser" routerLink="/user/login" class="btn btn-success">LogOut</button>
+   </div>
   </mat-toolbar>
 
   <mat-sidenav-container>
-    <mat-sidenav #sidenav="matSidenav">
+    <mat-sidenav #sidenav="matSidenav" mode = "side" [opened]="false">
       <h4 class="name">Pet Home</h4>
       <p class="description">Pet Care and Adoption Center</p>
       <mat-divider></mat-divider>

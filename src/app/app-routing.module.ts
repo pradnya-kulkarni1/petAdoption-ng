@@ -7,6 +7,7 @@ import { AdoptionRequestComponent } from '../feature/adoption-request/adoption-r
 import { BreedListComponent } from '../feature/Breed/breed-list/breed-list.component';
 import { PetListComponent } from '../feature/pet/pet-list/pet-list.component';
 import { SpeciesListComponent } from '../feature/species/species-list/species-list.component';
+import { ReviewComponent } from '../feature/review/review.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/home',pathMatch:'full'},
@@ -16,6 +17,8 @@ const routes: Routes = [
   {path:'breed/list',component:BreedListComponent},
   {path:'pet/list',component:PetListComponent},
   {path:'species/list', component:SpeciesListComponent},
+  {path: 'user/login', component:UserLoginComponent},
+  {path:'review/review',component:ReviewComponent},
   {path:'**',component:WelcomeComponent}
 
 

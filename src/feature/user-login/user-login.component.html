@@ -1,22 +1,66 @@
 
-<div class = "user-list">
-    <section class = "heading">
-<h4>User List</h4>
-</section>
-
-<table>
-  
-    <tr><th>Id</th><th>Firstname</th><th>Lastname</th><th>Phone</th><th>Email</th><th>Password</th><th>Action</th></tr>
-  
-
-
-<tr *ngFor="let user of users">
-    <td>{{user.id}}</td>
-    <td>{{user.firstname}}</td>
-    <td>{{user.lastname}}</td>
-    <td>{{user.phone}}</td>
-    <td>{{user.email}}</td>
-    <td>{{user.password}}</td>
-</tr>
-
-</table>
+<div class="container">
+  <span>
+    <h1>Welcome to the PetHome App</h1>
+  </span>
+  <div class = "user-login">
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <form class="text-center" style="display: inline-block">
+            <table
+              *ngIf="userlogin"
+              class="table-sm login-table"
+              style="
+                margin: 10px auto;
+                padding: 20px 10px;
+                border: 1px solid rgb(241, 25, 223);
+              "
+            >
+              <tr class="text-center">
+                <td colspan="2">Login</td>
+              </tr>
+              <tr>
+                <td>Email:</td>
+                <td>
+                  <input
+                    [(ngModel)]="userlogin.email"
+                    name="Email"
+                    type="text"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Password:</td>
+                <td>
+                  <input
+                    [(ngModel)]="userlogin.password"
+                    name="Password"
+                    type="password"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center" colspan="2">
+                  <button
+                    type="submit"
+                    (click)="login()"
+                    class="btn btn-primary"
+                  >
+                    Login
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <label class="text-danger">{{ message }}</label>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

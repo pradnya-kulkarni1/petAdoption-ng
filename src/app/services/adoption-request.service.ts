@@ -17,7 +17,7 @@ getAdoptionRequests():Observable<AdoptionRequest[]>{
 }
 
 postAdoptionRequest(AdoptionRequest: AdoptionRequest):Observable<AdoptionRequest>{
-  return this.http.post<AdoptionRequest>(URL, AdoptionRequest);
+  return this.http.post(URL, AdoptionRequest) as Observable<AdoptionRequest>;
 }
 
 updateAdoptionRequest(AdoptionRequest: AdoptionRequest):Observable<AdoptionRequest> {

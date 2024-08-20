@@ -69,6 +69,10 @@ ngOnInit(): void{
 }
 submit():void{
 
+  console.log('user  ',this.adoptionRequest.user.firstname);
+  console.log('customer ',this.adoptionRequest.customer.firstname);
+  console.log('referencePersonal ',this.adoptionRequest.referencePersonal.firstname);
+  console.log('referenceBackground ',this.adoptionRequest.referenceBackground.firstname);
   this.adoptReqSvc.postAdoptionRequest(this.adoptionRequest).subscribe({
     next:(resp)=>{
       this.adoptionRequest = resp;

@@ -56,21 +56,23 @@ navbar {
   .card {
     border: 1px solid #ccc;
     display:flex;
-    width:2.5in;
+    width:2.7in;
     height:2.7in;
     align-content:center;
     padding: 16px;
     align-items: center;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease,background-color 0.3s ease;
     justify-content:center;
     flex-direction:column;
+    margin-top:15px;
     
     margin-top:15px;
   }
   .card:hover{
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(237, 135, 135, 0.2);
+    background-color:beige;
   }
 
   .navbar .navbar-brand{
@@ -129,7 +131,10 @@ navbar {
     display:flex;
     justify-content: space-between;
     align-items:center;
+    
+    box-shadow:0px 4px 10px rgba(0, 0, 0, 0.1); 
   }
+  
   mat-sidenav {
 
       margin:16px;
@@ -140,7 +145,11 @@ navbar {
       color:brown;
       padding: 16px;
       text-align:center;
+      
+    box-shadow:0 2px 4px rgba(0, 0, 0, 0.1); 
+     
   }
+ 
   .content{
     height: calc(100vh - 98px);
     margin: 16px;
@@ -151,7 +160,6 @@ navbar {
   }
   mat-sidenav-container{
     height: calc(100vh - 65px);
-    
   }
   .menu-button{
     width:100%;
@@ -159,11 +167,25 @@ navbar {
     align-items:center;
     justify-content: flex-start;
     font-size:1rem;
-
-    mat-icon{
+    transition:  background-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #8fd8f3; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 10px;
+     }
+     .menu-button a { color:brown;
+      transition: color 0.3s ease;
+     }
+    .menu-button mat-icon{
       margin-right:8px;
     }
-  }
+    .menu-button:hover{
+      box-shadow:0 4px 8px gray;
+      background-color:lightcoral;
+    }
+  
   .name{
     margin: 0;
     margin-top: 8px;
